@@ -8,6 +8,9 @@
  *
  * `.(m|p)(t|r|b|l|e|s) {}` = margin/padding top/right/bottom/left/ends/sides
  */
+$inuit-margin:                  $inuit-base-spacing-unit !default;
+$inuit-padding:                 $inuit-base-spacing-unit !default;
+
 $inuit-enable-margins:          false !default;
 $inuit-enable-margins--small:   false !default;
 $inuit-enable-margins--large:   false !default;
@@ -29,13 +32,13 @@ $inuit-enable-paddings--none:   false !default;
  */
 @if ($inuit-enable-margins == true) {
 
-    .#{$inuit-namespace}m       { margin:           $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}mt      { margin-top:       $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}mr      { margin-right:     $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}mb      { margin-bottom:    $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}ml      { margin-left:      $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}me      { margin-top:       $inuit-base-spacing-unit !important; margin-bottom:    $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}ms      { margin-right:     $inuit-base-spacing-unit !important; margin-left:      $inuit-base-spacing-unit !important; }
+    .#{$inuit-namespace}m       { margin:           $inuit-margin !important; }
+    .#{$inuit-namespace}mt      { margin-top:       $inuit-margin !important; }
+    .#{$inuit-namespace}mr      { margin-right:     $inuit-margin !important; }
+    .#{$inuit-namespace}mb      { margin-bottom:    $inuit-margin !important; }
+    .#{$inuit-namespace}ml      { margin-left:      $inuit-margin !important; }
+    .#{$inuit-namespace}me      { margin-top:       $inuit-margin !important; margin-bottom:    $inuit-margin !important; }
+    .#{$inuit-namespace}ms      { margin-right:     $inuit-margin !important; margin-left:      $inuit-margin !important; }
 
 }
 
@@ -45,13 +48,13 @@ $inuit-enable-paddings--none:   false !default;
  */
 @if ($inuit-enable-margins--small == true) {
 
-    .#{$inuit-namespace}m-      { margin:           halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}mt-     { margin-top:       halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}mr-     { margin-right:     halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}mb-     { margin-bottom:    halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}ml-     { margin-left:      halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}me-     { margin-top:       halve($inuit-base-spacing-unit) !important; margin-bottom:    halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}ms-     { margin-right:     halve($inuit-base-spacing-unit) !important; margin-left:      halve($inuit-base-spacing-unit) !important; }
+    .#{$inuit-namespace}m-      { margin:           halve($inuit-margin) !important; }
+    .#{$inuit-namespace}mt-     { margin-top:       halve($inuit-margin) !important; }
+    .#{$inuit-namespace}mr-     { margin-right:     halve($inuit-margin) !important; }
+    .#{$inuit-namespace}mb-     { margin-bottom:    halve($inuit-margin) !important; }
+    .#{$inuit-namespace}ml-     { margin-left:      halve($inuit-margin) !important; }
+    .#{$inuit-namespace}me-     { margin-top:       halve($inuit-margin) !important; margin-bottom:    halve($inuit-margin) !important; }
+    .#{$inuit-namespace}ms-     { margin-right:     halve($inuit-margin) !important; margin-left:      halve($inuit-margin) !important; }
 
 }
 
@@ -61,13 +64,13 @@ $inuit-enable-paddings--none:   false !default;
  */
 @if ($inuit-enable-margins--large == true) {
 
-    .#{$inuit-namespace}m\+     { margin:           double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}mt\+    { margin-top:       double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}mr\+    { margin-right:     double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}mb\+    { margin-bottom:    double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}ml\+    { margin-left:      double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}me\+    { margin-top:       double($inuit-base-spacing-unit) !important; margin-bottom:    double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}ms\+    { margin-right:     double($inuit-base-spacing-unit) !important; margin-left:      double($inuit-base-spacing-unit) !important; }
+    .#{$inuit-namespace}m\+     { margin:           double($inuit-margin) !important; }
+    .#{$inuit-namespace}mt\+    { margin-top:       double($inuit-margin) !important; }
+    .#{$inuit-namespace}mr\+    { margin-right:     double($inuit-margin) !important; }
+    .#{$inuit-namespace}mb\+    { margin-bottom:    double($inuit-margin) !important; }
+    .#{$inuit-namespace}ml\+    { margin-left:      double($inuit-margin) !important; }
+    .#{$inuit-namespace}me\+    { margin-top:       double($inuit-margin) !important; margin-bottom:    double($inuit-margin) !important; }
+    .#{$inuit-namespace}ms\+    { margin-right:     double($inuit-margin) !important; margin-left:      double($inuit-margin) !important; }
 
 }
 
@@ -98,13 +101,13 @@ $inuit-enable-paddings--none:   false !default;
  */
 @if ($inuit-enable-paddings == true) {
 
-    .#{$inuit-namespace}p       { padding:          $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}pt      { padding-top:      $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}pr      { padding-right:    $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}pb      { padding-bottom:   $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}pl      { padding-left:     $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}pe      { padding-top:      $inuit-base-spacing-unit !important; padding-bottom:    $inuit-base-spacing-unit !important; }
-    .#{$inuit-namespace}ps      { padding-right:    $inuit-base-spacing-unit !important; padding-left:      $inuit-base-spacing-unit !important; }
+    .#{$inuit-namespace}p       { padding:          $inuit-padding !important; }
+    .#{$inuit-namespace}pt      { padding-top:      $inuit-padding !important; }
+    .#{$inuit-namespace}pr      { padding-right:    $inuit-padding !important; }
+    .#{$inuit-namespace}pb      { padding-bottom:   $inuit-padding !important; }
+    .#{$inuit-namespace}pl      { padding-left:     $inuit-padding !important; }
+    .#{$inuit-namespace}pe      { padding-top:      $inuit-padding !important; padding-bottom:    $inuit-padding !important; }
+    .#{$inuit-namespace}ps      { padding-right:    $inuit-padding !important; padding-left:      $inuit-padding !important; }
 
 }
 
@@ -114,13 +117,13 @@ $inuit-enable-paddings--none:   false !default;
  */
 @if ($inuit-enable-paddings--small == true) {
 
-    .#{$inuit-namespace}p-      { padding:           halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pt-     { padding-top:       halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pr-     { padding-right:     halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pb-     { padding-bottom:    halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pl-     { padding-left:      halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pe-     { padding-top:       halve($inuit-base-spacing-unit) !important; padding-bottom:    halve($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}ps-     { padding-right:     halve($inuit-base-spacing-unit) !important; padding-left:      halve($inuit-base-spacing-unit) !important; }
+    .#{$inuit-namespace}p-      { padding:           halve($inuit-padding) !important; }
+    .#{$inuit-namespace}pt-     { padding-top:       halve($inuit-padding) !important; }
+    .#{$inuit-namespace}pr-     { padding-right:     halve($inuit-padding) !important; }
+    .#{$inuit-namespace}pb-     { padding-bottom:    halve($inuit-padding) !important; }
+    .#{$inuit-namespace}pl-     { padding-left:      halve($inuit-padding) !important; }
+    .#{$inuit-namespace}pe-     { padding-top:       halve($inuit-padding) !important; padding-bottom:    halve($inuit-padding) !important; }
+    .#{$inuit-namespace}ps-     { padding-right:     halve($inuit-padding) !important; padding-left:      halve($inuit-padding) !important; }
 
 }
 
@@ -130,13 +133,13 @@ $inuit-enable-paddings--none:   false !default;
  */
 @if ($inuit-enable-paddings--large == true) {
 
-    .#{$inuit-namespace}p\+     { padding:           double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pt\+    { padding-top:       double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pr\+    { padding-right:     double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pb\+    { padding-bottom:    double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pl\+    { padding-left:      double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}pe\+    { padding-top:       double($inuit-base-spacing-unit) !important; padding-bottom:    double($inuit-base-spacing-unit) !important; }
-    .#{$inuit-namespace}ps\+    { padding-right:     double($inuit-base-spacing-unit) !important; padding-left:      double($inuit-base-spacing-unit) !important; }
+    .#{$inuit-namespace}p\+     { padding:           double($inuit-padding) !important; }
+    .#{$inuit-namespace}pt\+    { padding-top:       double($inuit-padding) !important; }
+    .#{$inuit-namespace}pr\+    { padding-right:     double($inuit-padding) !important; }
+    .#{$inuit-namespace}pb\+    { padding-bottom:    double($inuit-padding) !important; }
+    .#{$inuit-namespace}pl\+    { padding-left:      double($inuit-padding) !important; }
+    .#{$inuit-namespace}pe\+    { padding-top:       double($inuit-padding) !important; padding-bottom:    double($inuit-padding) !important; }
+    .#{$inuit-namespace}ps\+    { padding-right:     double($inuit-padding) !important; padding-left:      double($inuit-padding) !important; }
 
 }
 
