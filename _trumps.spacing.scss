@@ -6,7 +6,7 @@
  * Margin and padding helper classes. Use these to tweak layout on a micro
  * level.
  *
- * `.(m|p)(t|r|b|l|e|s) {}` = margin/padding top/right/bottom/left/ends/sides
+ * `.(m|p)(t|r|b|l|e|s)(-|+|0) {}` = margin/padding top/right/bottom/left/ends/sides less/more/none
  */
 $inuit-margin:                  $inuit-base-spacing-unit !default;
 $inuit-padding:                 $inuit-base-spacing-unit !default;
