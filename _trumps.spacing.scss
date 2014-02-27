@@ -14,13 +14,17 @@ $inuit-margin:                  $inuit-base-spacing-unit !default;
 $inuit-padding:                 $inuit-base-spacing-unit !default;
 
 $inuit-enable-margins:          false !default;
+$inuit-enable-margins--tiny:    false !default;
 $inuit-enable-margins--small:   false !default;
 $inuit-enable-margins--large:   false !default;
+$inuit-enable-margins--huge:    false !default;
 $inuit-enable-margins--none:    false !default;
 
 $inuit-enable-paddings:         false !default;
+$inuit-enable-paddings--tiny:   false !default;
 $inuit-enable-paddings--small:  false !default;
 $inuit-enable-paddings--large:  false !default;
+$inuit-enable-paddings--huge:   false !default;
 $inuit-enable-paddings--none:   false !default;
 
 
@@ -42,6 +46,23 @@ $inuit-enable-paddings--none:   false !default;
     .#{$inuit-namespace}ml      { margin-left:      $inuit-margin !important; }
     .#{$inuit-namespace}me      { margin-top:       $inuit-margin !important; margin-bottom:    $inuit-margin !important; }
     .#{$inuit-namespace}ms      { margin-right:     $inuit-margin !important; margin-left:      $inuit-margin !important; }
+
+}
+
+
+@if ($inuit-enable-margins--tiny == true) {
+
+    /**
+     * Add tiny margins.
+     */
+
+    .#{$inuit-namespace}m--     { margin:           quarter($inuit-margin) !important; }
+    .#{$inuit-namespace}mt--    { margin-top:       quarter($inuit-margin) !important; }
+    .#{$inuit-namespace}mr--    { margin-right:     quarter($inuit-margin) !important; }
+    .#{$inuit-namespace}mb--    { margin-bottom:    quarter($inuit-margin) !important; }
+    .#{$inuit-namespace}ml--    { margin-left:      quarter($inuit-margin) !important; }
+    .#{$inuit-namespace}me--    { margin-top:       quarter($inuit-margin) !important; margin-bottom:    quarter($inuit-margin) !important; }
+    .#{$inuit-namespace}ms--    { margin-right:     quarter($inuit-margin) !important; margin-left:      quarter($inuit-margin) !important; }
 
 }
 
@@ -76,6 +97,23 @@ $inuit-enable-paddings--none:   false !default;
     .#{$inuit-namespace}ml\+    { margin-left:      double($inuit-margin) !important; }
     .#{$inuit-namespace}me\+    { margin-top:       double($inuit-margin) !important; margin-bottom:    double($inuit-margin) !important; }
     .#{$inuit-namespace}ms\+    { margin-right:     double($inuit-margin) !important; margin-left:      double($inuit-margin) !important; }
+
+}
+
+
+@if ($inuit-enable-margins--huge == true) {
+
+    /**
+     * Add huge margins.
+     */
+
+    .#{$inuit-namespace}m\+\+   { margin:           double(double($inuit-margin)) !important; }
+    .#{$inuit-namespace}mt\+\+  { margin-top:       double(double($inuit-margin)) !important; }
+    .#{$inuit-namespace}mr\+\+  { margin-right:     double(double($inuit-margin)) !important; }
+    .#{$inuit-namespace}mb\+\+  { margin-bottom:    double(double($inuit-margin)) !important; }
+    .#{$inuit-namespace}ml\+\+  { margin-left:      double(double($inuit-margin)) !important; }
+    .#{$inuit-namespace}me\+\+  { margin-top:       double(double($inuit-margin)) !important; margin-bottom:    double(double($inuit-margin)) !important; }
+    .#{$inuit-namespace}ms\+\+  { margin-right:     double(double($inuit-margin)) !important; margin-left:      double(double($inuit-margin)) !important; }
 
 }
 
@@ -119,6 +157,23 @@ $inuit-enable-paddings--none:   false !default;
 }
 
 
+@if ($inuit-enable-paddings--tiny == true) {
+
+    /**
+     * Add tiny paddings.
+     */
+
+    .#{$inuit-namespace}p--     { padding:           quarter($inuit-padding) !important; }
+    .#{$inuit-namespace}pt--    { padding-top:       quarter($inuit-padding) !important; }
+    .#{$inuit-namespace}pr--    { padding-right:     quarter($inuit-padding) !important; }
+    .#{$inuit-namespace}pb--    { padding-bottom:    quarter($inuit-padding) !important; }
+    .#{$inuit-namespace}pl--    { padding-left:      quarter($inuit-padding) !important; }
+    .#{$inuit-namespace}pe--    { padding-top:       quarter($inuit-padding) !important; padding-bottom:    quarter($inuit-padding) !important; }
+    .#{$inuit-namespace}ps--    { padding-right:     quarter($inuit-padding) !important; padding-left:      quarter($inuit-padding) !important; }
+
+}
+
+
 @if ($inuit-enable-paddings--small == true) {
 
     /**
@@ -151,6 +206,24 @@ $inuit-enable-paddings--none:   false !default;
     .#{$inuit-namespace}ps\+    { padding-right:     double($inuit-padding) !important; padding-left:      double($inuit-padding) !important; }
 
 }
+
+
+@if ($inuit-enable-paddings--huge == true) {
+
+    /**
+     * Add huge paddings.
+     */
+
+    .#{$inuit-namespace}p\+\+   { padding:           double(double($inuit-padding)) !important; }
+    .#{$inuit-namespace}pt\+\+  { padding-top:       double(double($inuit-padding)) !important; }
+    .#{$inuit-namespace}pr\+\+  { padding-right:     double(double($inuit-padding)) !important; }
+    .#{$inuit-namespace}pb\+\+  { padding-bottom:    double(double($inuit-padding)) !important; }
+    .#{$inuit-namespace}pl\+\+  { padding-left:      double(double($inuit-padding)) !important; }
+    .#{$inuit-namespace}pe\+\+  { padding-top:       double(double($inuit-padding)) !important; padding-bottom:    double(double($inuit-padding)) !important; }
+    .#{$inuit-namespace}ps\+\+  { padding-right:     double(double($inuit-padding)) !important; padding-left:      double(double($inuit-padding)) !important; }
+
+}
+
 
 @if ($inuit-enable-paddings--none == true) {
 
