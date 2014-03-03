@@ -6,11 +6,12 @@
  * Margin and padding helper classes. Use these to tweak layout on a micro
  * level.
  *
- * `.(m|p)(t|r|b|l|e|s)(-|+|0) {}` = margin/padding top/right/bottom/left/ends/sides less/more/none
+ * `.(m|p|b)(t|r|b|l|e|s)(-|+|0) {}` = margin/padding top/right/bottom/left/ends/sides less/more/none
  */
 
 // Predefine the variables below in order to alter and enable specific features.
 $inuit-margin:                  $inuit-base-spacing-unit !default;
+$inuit-border:                  $inuit-base-spacing-unit !default;
 $inuit-padding:                 $inuit-base-spacing-unit !default;
 
 $inuit-enable-margins:          false !default;
@@ -19,6 +20,13 @@ $inuit-enable-margins--small:   false !default;
 $inuit-enable-margins--large:   false !default;
 $inuit-enable-margins--huge:    false !default;
 $inuit-enable-margins--none:    false !default;
+
+$inuit-enable-borders:         false !default;
+$inuit-enable-borders--tiny:   false !default;
+$inuit-enable-borders--small:  false !default;
+$inuit-enable-borders--large:  false !default;
+$inuit-enable-borders--huge:   false !default;
+$inuit-enable-borders--none:   false !default;
 
 $inuit-enable-paddings:         false !default;
 $inuit-enable-paddings--tiny:   false !default;
@@ -131,6 +139,163 @@ $inuit-enable-paddings--none:   false !default;
     .#{$inuit-namespace}ml0     { margin-left:      0 !important; }
     .#{$inuit-namespace}me0     { margin-top:       0 !important; margin-bottom:    0 !important; }
     .#{$inuit-namespace}ms0     { margin-right:     0 !important; margin-left:      0 !important; }
+
+}
+
+
+
+
+
+@if ($inuit-enable-borders == true) {
+
+    /**
+     * Padding helper classes.
+     *
+     * Add borders.
+     */
+
+    .#{$inuit-namespace}b,
+    .#{$inuit-namespace}bt,
+    .#{$inuit-namespace}br,
+    .#{$inuit-namespace}bb,
+    .#{$inuit-namespace}bl,
+    .#{$inuit-namespace}be,
+    .#{$inuit-namespace}bs {
+        border: 0 solid transparent !important;
+    }
+
+    .#{$inuit-namespace}b       { border-width:          $inuit-border !important; }
+    .#{$inuit-namespace}bt      { border-top-width:      $inuit-border !important; }
+    .#{$inuit-namespace}br      { border-right-width:    $inuit-border !important; }
+    .#{$inuit-namespace}bb      { border-bottom-width:   $inuit-border !important; }
+    .#{$inuit-namespace}bl      { border-left-width:     $inuit-border !important; }
+    .#{$inuit-namespace}be      { border-top-width:      $inuit-border !important; border-bottom-width:  $inuit-border !important; }
+    .#{$inuit-namespace}bs      { border-right-width:    $inuit-border !important; border-left-width:    $inuit-border !important; }
+
+}
+
+
+@if ($inuit-enable-borders--tiny == true) {
+
+    /**
+     * Add tiny borders.
+     */
+
+    .#{$inuit-namespace}b--,
+    .#{$inuit-namespace}bt--,
+    .#{$inuit-namespace}br--,
+    .#{$inuit-namespace}bb--,
+    .#{$inuit-namespace}bl--,
+    .#{$inuit-namespace}be--,
+    .#{$inuit-namespace}bs-- {
+        border: 0 solid transparent !important;
+    }
+
+    .#{$inuit-namespace}b--     { border-width:           quarter($inuit-border) !important; }
+    .#{$inuit-namespace}bt--    { border-top-width:       quarter($inuit-border) !important; }
+    .#{$inuit-namespace}br--    { border-right-width:     quarter($inuit-border) !important; }
+    .#{$inuit-namespace}bb--    { border-bottom-width:    quarter($inuit-border) !important; }
+    .#{$inuit-namespace}bl--    { border-left-width:      quarter($inuit-border) !important; }
+    .#{$inuit-namespace}be--    { border-top-width:       quarter($inuit-border) !important; border-bottom-width:    quarter($inuit-border) !important; }
+    .#{$inuit-namespace}bs--    { border-right-width:     quarter($inuit-border) !important; border-left-width:      quarter($inuit-border) !important; }
+
+}
+
+
+@if ($inuit-enable-borders--small == true) {
+
+    /**
+     * Add small borders.
+     */
+
+    .#{$inuit-namespace}b-,
+    .#{$inuit-namespace}bt-,
+    .#{$inuit-namespace}br-,
+    .#{$inuit-namespace}bb-,
+    .#{$inuit-namespace}bl-,
+    .#{$inuit-namespace}be-,
+    .#{$inuit-namespace}bs- {
+        border: 0 solid transparent !important;
+    }
+
+    .#{$inuit-namespace}b-      { border-width:           halve($inuit-border) !important; }
+    .#{$inuit-namespace}bt-     { border-top-width:       halve($inuit-border) !important; }
+    .#{$inuit-namespace}br-     { border-right-width:     halve($inuit-border) !important; }
+    .#{$inuit-namespace}bb-     { border-bottom-width:    halve($inuit-border) !important; }
+    .#{$inuit-namespace}bl-     { border-left-width:      halve($inuit-border) !important; }
+    .#{$inuit-namespace}be-     { border-top-width:       halve($inuit-border) !important; border-bottom-width:  halve($inuit-border) !important; }
+    .#{$inuit-namespace}bs-     { border-right-width:     halve($inuit-border) !important; border-left-width:    halve($inuit-border) !important; }
+
+}
+
+
+@if ($inuit-enable-borders--large == true) {
+
+    /**
+     * Add large borders.
+     */
+
+    .#{$inuit-namespace}b\+,
+    .#{$inuit-namespace}bt\+,
+    .#{$inuit-namespace}br\+,
+    .#{$inuit-namespace}bb\+,
+    .#{$inuit-namespace}bl\+,
+    .#{$inuit-namespace}be\+,
+    .#{$inuit-namespace}bs\+ {
+        border: 0 solid transparent !important;
+    }
+
+    .#{$inuit-namespace}b\+     { border-width:           double($inuit-border) !important; }
+    .#{$inuit-namespace}bt\+    { border-top-width:       double($inuit-border) !important; }
+    .#{$inuit-namespace}br\+    { border-right-width:     double($inuit-border) !important; }
+    .#{$inuit-namespace}bb\+    { border-bottom-width:    double($inuit-border) !important; }
+    .#{$inuit-namespace}bl\+    { border-left-width:      double($inuit-border) !important; }
+    .#{$inuit-namespace}be\+    { border-top-width:       double($inuit-border) !important; border-bottom-width: double($inuit-border) !important; }
+    .#{$inuit-namespace}bs\+    { border-right-width:     double($inuit-border) !important; border-left-width:   double($inuit-border) !important; }
+
+}
+
+
+@if ($inuit-enable-borders--huge == true) {
+
+    /**
+     * Add huge borders.
+     */
+
+    .#{$inuit-namespace}b\+\+,
+    .#{$inuit-namespace}bt\+\+,
+    .#{$inuit-namespace}br\+\+,
+    .#{$inuit-namespace}bb\+\+,
+    .#{$inuit-namespace}bl\+\+,
+    .#{$inuit-namespace}be\+\+,
+    .#{$inuit-namespace}bs\+\+ {
+        border: 0 solid transparent !important;
+    }
+
+    .#{$inuit-namespace}b\+\+   { border-width:           quadruple($inuit-border) !important; }
+    .#{$inuit-namespace}bt\+\+  { border-top-width:       quadruple($inuit-border) !important; }
+    .#{$inuit-namespace}br\+\+  { border-right-width:     quadruple($inuit-border) !important; }
+    .#{$inuit-namespace}bb\+\+  { border-bottom-width:    quadruple($inuit-border) !important; }
+    .#{$inuit-namespace}bl\+\+  { border-left-width:      quadruple($inuit-border) !important; }
+    .#{$inuit-namespace}be\+\+  { border-top-width:       quadruple($inuit-border) !important; border-bottom-width:  quadruple($inuit-border) !important; }
+    .#{$inuit-namespace}bs\+\+  { border-right-width:     quadruple($inuit-border) !important; border-left-width:    quadruple($inuit-border) !important; }
+
+}
+
+
+@if ($inuit-enable-borders--none == true) {
+
+    /**
+     * Remove borders.
+     */
+
+    .#{$inuit-namespace}b0      { border-width:          0 !important; }
+    .#{$inuit-namespace}bt0     { border-top-width:      0 !important; }
+    .#{$inuit-namespace}br0     { border-right-width:    0 !important; }
+    .#{$inuit-namespace}bb0     { border-bottom-width:   0 !important; }
+    .#{$inuit-namespace}bl0     { border-left-width:     0 !important; }
+    .#{$inuit-namespace}be0     { border-top-width:      0 !important; border-bottom-width:   0 !important; }
+    .#{$inuit-namespace}bs0     { border-right-width:    0 !important; border-left-width:     0 !important; }
 
 }
 
