@@ -1,10 +1,14 @@
 {
   "name": "inuit-spacing",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "homepage": "https://github.com/inuitcss/trumps.spacing",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
   ],
+  "contributors": [{
+    "name": "twissell",
+    "mail": "mail@twissell.com"
+  }],
   "description": "Spacing helper classes in the inuitcss framework",
   "main": "_trumps.spacing.scss",
   "keywords": [
