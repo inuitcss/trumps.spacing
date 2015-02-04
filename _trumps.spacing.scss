@@ -16,6 +16,7 @@ $inuit-margin:                          $inuit-base-spacing-unit !default;
 $inuit-padding:                         $inuit-base-spacing-unit !default;
 
 $inuit-enable-margins:                  false !default;
+$inuit-enable-margins--auto:            false !default;
 $inuit-enable-margins--tiny:            false !default;
 $inuit-enable-margins--small:           false !default;
 $inuit-enable-margins--large:           false !default;
@@ -56,6 +57,14 @@ $inuit-enable-paddings--none:           false !default;
     .#{$inuit-spacing-namespace}ml      { margin-left:      $inuit-margin !important; }
     .#{$inuit-spacing-namespace}mh      { margin-right:     $inuit-margin !important; margin-left:      $inuit-margin !important; }
     .#{$inuit-spacing-namespace}mv      { margin-top:       $inuit-margin !important; margin-bottom:    $inuit-margin !important; }
+
+    .#{$inuit-spacing-namespace}ma      { margin:        auto !important; }
+    .#{$inuit-spacing-namespace}mta     { margin-top:    auto !important; }
+    .#{$inuit-spacing-namespace}mra     { margin-right:  auto !important; }
+    .#{$inuit-spacing-namespace}mba     { margin-bottom: auto !important; }
+    .#{$inuit-spacing-namespace}mla     { margin-left:   auto !important; }
+    .#{$inuit-spacing-namespace}mha     { margin-right:  auto !important; margin-left:   auto !important; }
+    .#{$inuit-spacing-namespace}mva     { margin-top:    auto !important; margin-bottom: auto !important; }
 
 }
 
@@ -230,7 +239,20 @@ $inuit-enable-paddings--none:           false !default;
 }
 
 
+@if ($inuit-enable-margins--auto == true) {
+  
+    /**
+     * Auto margins.
+     */
 
+    .#{$inuit-spacing-namespace}ma  { margin:        auto !important; } 
+    .#{$inuit-spacing-namespace}mta { margin-top:    auto !important; }
+    .#{$inuit-spacing-namespace}mra { margin-right:  auto !important; }
+    .#{$inuit-spacing-namespace}mba { margin-bottom: auto !important; }
+    .#{$inuit-spacing-namespace}mla { margin-left:   auto !important; }
+    .#{$inuit-spacing-namespace}mha { margin-right:  auto !important; margin-left:   auto !important; }
+    .#{$inuit-spacing-namespace}mva { margin-top:    auto !important; margin-bottom: auto !important; }
+}
 
 
 @if ($inuit-enable-paddings == true) {

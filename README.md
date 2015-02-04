@@ -23,5 +23,6 @@ E.g.:
 * `.mh++` will give you a huge (`++`) horizontal (`h`) margin (`m`).
 * `.mb0` will give you no (`0`) margin (`m`) bottom (`b`).
 * `.pl-` will give you a small (`-`) padding (`p`) left (`l`).
+* `.mha` will give you an auto (`a`) horizontal (`h`) margin (`m`).
 
 Knowing these conventions means you can compose a huge array of spacing helpers.
