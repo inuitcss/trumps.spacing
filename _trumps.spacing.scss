@@ -13,15 +13,15 @@
 $inuit-spacing-namespace:               $inuit-namespace !default;
 
 $inuit-margin:                          $inuit-base-spacing-unit !default;
-$inuit-margin--small:                   halve($inuit-margin) !default;
-$inuit-margin--tiny:                    quarter($inuit-margin) !default;
-$inuit-margin--large:                   double($inuit-margin) !default;
+$inuit-margin--small:                       halve($inuit-margin) !default;
+$inuit-margin--tiny:                      quarter($inuit-margin) !default;
+$inuit-margin--large:                      double($inuit-margin) !default;
 $inuit-margin--huge:                    quadruple($inuit-margin) !default;
 
 $inuit-padding:                         $inuit-base-spacing-unit !default;
-$inuit-padding--small:                  halve($inuit-padding) !default;
-$inuit-padding--tiny:                   quarter($inuit-padding) !default;
-$inuit-padding--large:                  double($inuit-padding) !default;
+$inuit-padding--small:                      halve($inuit-padding) !default;
+$inuit-padding--tiny:                     quarter($inuit-padding) !default;
+$inuit-padding--large:                     double($inuit-padding) !default;
 $inuit-padding--huge:                   quadruple($inuit-padding) !default;
 
 $inuit-enable-margins:                  false !default;
