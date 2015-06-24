@@ -6,7 +6,8 @@
  * Margin and padding helper classes. Use these to tweak layout on a micro
  * level.
  *
- * `.(m|p)(t|r|b|l|h|v)(-|+|0) {}` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ * `.u-(m|p)(t|r|b|l|h|v)(-tiny|-small|-large|-huge|-none) {}`
+ * = margin/padding top/right/bottom/left/horizontal/vertical tiny/small/large/huge/none
  */
 
 // Predefine the variables below in order to alter and enable specific features.
