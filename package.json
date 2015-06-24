@@ -1,6 +1,6 @@
 {
   "name": "inuit-spacing",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Spacing helper classes in the inuitcss framework",
   "main": "_trumps.spacing.scss",
   "repository": {
