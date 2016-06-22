@@ -183,7 +183,7 @@ $inuit-enable-paddings--none:           false !default;
     .#{$inuit-spacing-namespace}u--mb-- { margin-bottom:    -$inuit-margin--tiny !important; }
     .#{$inuit-spacing-namespace}u--ml-- { margin-left:      -$inuit-margin--tiny !important; }
     .#{$inuit-spacing-namespace}u--mh-- { margin-right:     -$inuit-margin--tiny !important; margin-left:     -$inuit-margin--tiny !important; }
-    .#{$inuit-spacing-namespace}u--mv-- { margin-top:       -$inuit-margin--tiny !important; margin-bottom:   -$inuit-margin--huge !important; }
+    .#{$inuit-spacing-namespace}u--mv-- { margin-top:       -$inuit-margin--tiny !important; margin-bottom:   -$inuit-margin--tiny !important; }
 
 }
 
